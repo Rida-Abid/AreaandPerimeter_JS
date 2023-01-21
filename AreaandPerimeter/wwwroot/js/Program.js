@@ -4,20 +4,31 @@ Main(arr);
 
 function Main(arr) {
 
-   
+    if (arr.length < 4) {
+        console.error('Enter 4 values ');
+        console.log('usage: Enter S, R, T for Sqaure, Rectangle or Triangle and then enter Length, Bredth and Height');
+        return;
+    }
 
-    
-    
+   
+   
+    else {
         var shape = arr[0];
         var length = parseFloat(arr[1]);
         var bredth = parseFloat(arr[2]);
         var height = parseFloat(arr[3]);
 
-       
+        if ((isNaN(length)) || (isNaN(bredth)) || (isNaN(height)) == true) {
+            console.log('Enter numeric values for length, bredth, height');
+            return;
+        }
 
-        
+        if ((length <= 0) || (bredth <= 0) || (height <= 0)) {
+            console.log('Enter all values greater than 0 for length, bredth, height');
 
-        
+        }
+
+        else {
 
             function areaofSquare(length) {
                 return length * length;
@@ -77,7 +88,7 @@ function Main(arr) {
             }
 
 
-        
+        }
 
-    
+    }
 }
